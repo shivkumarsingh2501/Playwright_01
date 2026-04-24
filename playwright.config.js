@@ -13,7 +13,7 @@ module.exports = defineConfig({
 
   use: {
     storageState: 'loginData.json',
-    headless: false
+    headless: true
   },
 
   projects: [
