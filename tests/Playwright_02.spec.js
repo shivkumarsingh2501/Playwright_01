@@ -18,12 +18,16 @@ test("testing global setup", async ({ page }) => {
     console.log(title);
   }
 
-  if (titles.includes("iphone X")) {
-    console.log("Contains Iphone X");
+  if (titles.includes("iphone 13 pro")) {
+    console.log("Contains iphone 13 pro");
   } else {
     console.log("No Phone located");
   }
 
-  await expect(titles).toContain("iphone 13 pro");
+  expect(titles).toContain("iphone 13 pro");
+
+  const product = page.locator('.card-body').filter({ hasText: 'iphone 13 pro' });
+
+  await product.getByRole('button', { name: 'Add To Cart' }).click();
 
 });
