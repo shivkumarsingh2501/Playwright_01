@@ -9,6 +9,9 @@ test ("Login test", async ({ page }) => {
   await userName.fill("rahulshettyacademy");
   await password.fill("Learning@830$3mK2");
   await Login.click();
+
+
+  
   await page.context().storageState(
     { 
         path: "loginData.json" 

@@ -1,5 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const { getToken } = require('../utils/apiLogin');
+
 test.use({
   storageState: { cookies: [], origins: [] }
 });

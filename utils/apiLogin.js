@@ -5,7 +5,7 @@ async function getToken() {
    const apiContext = await request.newContext();
 
    const response = await apiContext.post(
-      'https://rahulshettyacademy.com/api/ecom/auth/login',
+      ''https://rahulshettyacademy.com/api/ecom/auth/login,
       {
          data: {
             userEmail: 'rahulshettyacademy',
