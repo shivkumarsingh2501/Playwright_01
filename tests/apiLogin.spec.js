@@ -1,6 +1,8 @@
 const { test, expect } = require('@playwright/test');
 const { getToken } = require('../utils/apiLogin');
-
+test.use({
+  storageState: { cookies: [], origins: [] }
+});
 test('API Login Test', async ({ browser }) => {
 
    const token = await getToken();
@@ -15,10 +17,5 @@ test('API Login Test', async ({ browser }) => {
 
    await page.goto('https://rahulshettyacademy.com/client');
 
-   
-   await page.context().storageState(
-    { 
-        path: "authorization.json" 
-    });
 
 });
