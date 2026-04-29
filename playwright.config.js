@@ -4,6 +4,7 @@ module.exports = defineConfig({
   testDir: './tests',
 
   timeout: 40000,
+  workers:4,
 
   expect: {
     timeout: 40000
